@@ -3,9 +3,27 @@
 namespace DeepCopy\Reflection;
 
 use DeepCopy\Exception\PropertyException;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 
 class ReflectionHelper
 {
+    /**
+     * @var ContainerInterface
+     */
+    protected $ctn;
+
+    /**
+     * JavascriptTester constructor.
+     *
+     * @param ContainerInterface $ctn
+     */
+    public function __construct(ContainerInterface $ctn)
+    {
+        $this->ctn = $ctn;
+    }
+
     /**
      * Retrieves all properties (including private ones), from object and all its ancestors.
      *
@@ -37,6 +55,21 @@ class ReflectionHelper
         }
 
         return $propsArr;
+    }
+
+    /**
+     * Retrieves a JSON object as array from an URL.
+     *
+     * @param string $url
+     *
+     * @return \ReflectionClass
+     * @throws PropertyException
+     */
+    public function getHttpReflection($url)
+    {
+        // TODO
+
+        return null;
     }
 
     /**

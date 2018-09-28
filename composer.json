@@ -1,9 +1,9 @@
 {
-    "name": "myclabs/deep-copy",
+    "name": "jdperc/deep-copy-fixed",
     "type": "library",
-    "description": "Create deep copies (clones) of your objects",
+    "description": "A fork of the great myclabs/DeepCopy bundle for Symfony",
     "keywords": ["clone", "copy", "duplicate", "object", "object graph"],
-    "homepage": "https://github.com/myclabs/DeepCopy",
+    "homepage": "https://github.com/jdperc/deep-copy-fixed",
     "license": "MIT",
     "autoload": {
         "psr-4": { "DeepCopy\\": "src/DeepCopy/" }
